@@ -180,7 +180,7 @@ class beastieSingleAgent:
             cons.append(beliefs[0, 0:self.STATE_DIM] - initial_pos)
             cons.append(beliefs[0, self.STATE_DIM] - initial_cov)
             cons.append(controls[-1, 0:self.STATE_DIM] )
-            cons.append(beliefs[-1, 0:self.STATE_DIM] - final_goal)
+            # cons.append(beliefs[-1, 0:self.STATE_DIM] - final_goal)
             # cons.append(beliefs[-1, STATE_DIM] - FINAL_COV)
             return np.hstack(cons)
         
